@@ -19,7 +19,8 @@ export default {
 	components : {FrameHeader,FrameBody}
 }
 </script>
-<style name="scoped">
+<style name="scoped" lang="less">
+	@import '../../less/macro.less';
 	.frame{
 		position:relative;
 		height:100%;
