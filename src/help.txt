@@ -1,0 +1,4 @@
+assets raw res
+components 公共的
+views      业务相关的入口
+
