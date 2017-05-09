@@ -1,12 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import menus from './menu.js'
 // import Frame from '@/components/frame'
 // import Dashborad from '@/views/dashboard'
 // import Login from '@/views/auth/login'
 // import NotFound from '@/views/notfound'
 
 Vue.use(Router)
-
+let _routes = menus.map((item,i)=>{
+  return {
+    path:"/"+item,
+    name : "name"+i,
+    component: require('@/views/test')
+  }
+})
+console.log(_routes)
 export default new Router({
   routes: [
     {
@@ -25,5 +33,6 @@ export default new Router({
       path : "*",
       component : (resolve)=>require(['@/views/notfound'],resolve)
     }
+    ,..._routes
   ]
 })

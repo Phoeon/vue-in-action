@@ -8,7 +8,7 @@
 </template>
 <script>
 	export default {
-		name : "Hello",
+		name : "Test",
 		data(){
 			return {
 				msg : "Hello world !",
@@ -17,6 +17,9 @@
 		},
 		created(){
 			console.log(Math.random());
+		},
+		updated(){
+			console.log(Math.random()+":")
 		}
 	}
 </script>

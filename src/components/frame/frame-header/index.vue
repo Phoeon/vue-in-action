@@ -50,6 +50,7 @@
 </script>
 <style lang="less" scoped>
 	.frame-header{
+		display:none;
 		position:relative;
 		z-index:1;
 		background-color:#000;

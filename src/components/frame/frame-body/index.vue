@@ -22,7 +22,8 @@ export default {
 .frame-body{
 	position:absolute;
 	width:100%;
-	top:2.2em;
+	//top:2.2em;
+	top:0;
 	bottom:0;
 	overflow:hidden;
 }
