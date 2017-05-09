@@ -1,15 +1,15 @@
 <template>
-	<section>
+	<section class="content-zone">
 	<h1>page not found</h1>
-	<p>{{seconds}} 秒后，将跳回
-	<span v-if="auth">
-		<router-link to="dashboard">dashboard</router-link>
-	</span>
-	<span v-else>
-		<router-link to="login">login</router-link>
-	</span>
-	
-	</p>
+		<p>{{seconds}} 秒后，将跳回
+		<span v-if="auth">
+			<router-link to="/dashboard/dashboard">dashboard</router-link>
+		</span>
+		<span v-else>
+			<router-link to="/login">login</router-link>
+		</span>
+		
+		</p>
 	</section>
 </template>
 <script>
@@ -32,7 +32,7 @@
 		watch : {
 			seconds(cv){
 				if(cv===0)this.$router.replace({
-					path : this.auth?"dashboard":"login"
+					path : this.auth?"/dashboard/dashboard":"/login"
 				});
 			}
 		}
@@ -40,7 +40,16 @@
 </script>
 <style scoped lang="less">
 @import '../../less/macro.less';
-.notfound{
-	color:red;
+.content-zone{
+	.pd(3em);
+	h1{
+		.fs(3em);
+		.lh(3.5em);
+		.fc(#ff8604);
+	}
+	p{
+		.fc(green);
+		.fs(2em);
+	}
 }
 </style>

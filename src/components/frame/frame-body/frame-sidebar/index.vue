@@ -22,7 +22,7 @@
 						<a 
 						v-else
 						:class='{"menu-a":true,active:activeLevel1Menu==item.name}'
-						@click="toggle(item.name)">
+						@click="toggleFirst(item.name)">
 							<i :class='["fa","fa-"+item.icon]'></i>
 							<span>{{item.name}}</span>
 							<em class="arrow"></em>
@@ -34,8 +34,7 @@
 							<li class="menu-item second-item" v-for="child in item.child" :key="child.name">
 								<router-link
 								:to="{path:'/'+child.operation}"
-								:class='{active:child.current_menu==1,"menu-a":true}'
-								>
+								:class='{"menu-a":true}'>
 									<span>{{child.name}}</span>
 								</router-link>
 							</li>
@@ -58,9 +57,14 @@
 			return LeftData;
 		},
 		methods : {
-			toggle(name){
+			toggleFirst(name){
 				var pn = this.activeLevel1Menu;
 				this.activeLevel1Menu = pn==name?"":name;
+			},
+			toggleSecond(name){
+				var pn = this.activeLevel2Menu;
+				this.activeLevel2Menu = pn==name?"":name;
+				console.log(name);
 			}
 		},
 		watch : {
@@ -175,7 +179,9 @@
 						.menu-a{
 							.pl(42px);
 							.bgc(transparent);
-							&.active{
+							&.router-link-active{
+								.fc(#fff);
+								
 								&:before{
 									content:"";
 									.pa;

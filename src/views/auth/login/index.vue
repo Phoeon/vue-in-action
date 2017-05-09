@@ -4,14 +4,10 @@
 			<input type="text" v-model="userinfo.account" :placeholder="loginForm.account">
 			<br>
 			<input type="text" v-model="userinfo.password" :placeholder="loginForm.password">
-			<button @click="login">LOGIN</button> <a @click.prevent="isLogin=false">REGISTER</a>
-		</form>
-		<form action="" v-if="!isLogin">
-			<input type="text" v-model="userinfo.account" :placeholder="loginForm.account">
 			<br>
-			<input type="text" v-model="userinfo.password" :placeholder="loginForm.password">
-			<button @click="register">REGISTER</button><a @click.prevent="isLogin=true">LOGIN</a>
+			<button @click="login">LOGIN</button> 
 		</form>
+
 	</section>
 </template>
 <script>
@@ -37,7 +33,7 @@ export default {
 			if(userinfo.account=="fuyue"&&userinfo.password=="123456"){
 				sessionStorage.setItem("session_id",true);
 				this.$router.replace({
-					path : "dashboard"
+					path : "/dashboard"
 				})
 			}
 		},
@@ -49,7 +45,34 @@ export default {
 </script>
 <style scoped lang="less">
 @import '../../../less/macro.less';
-.login{
-	color:red;
+section{
+	form{
+		.w(500px);
+		.h(300px);
+		.db;
+		.mg(30px auto);
+
+		input,button,.fn-btn{
+			.w(100%);
+			.db;
+			.lh(3em);
+			.ti(2em);
+			.bd(1px solid #ccc);
+			.brs(3px);
+			outline:none;
+			&:focus{
+				.bd(1px solid #4390ee)
+			}
+		}
+		button,.fn-btn{
+			.bgc(#f3f3f3);
+			.mb(1em);
+			.fc(#666);
+			.ta(center);
+		}
+	}
+	.tip{
+		.fc(red);
+	}
 }
 </style>

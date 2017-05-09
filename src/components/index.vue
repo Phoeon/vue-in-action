@@ -1,13 +1,11 @@
 <template>
-<h1>dialog</h1>
+<router-view></router-view>
 </template>
 <script>
 	export default {
-		name : "Dialog"
+		name : "Bootstrap"
 	}
 </script>
 <style scoped lang="less">
 @import '../../less/macro.less';
-
-//to do
 </style>
