@@ -25,4 +25,4 @@ export default {
 		position:relative;
 		height:100%;
 	}
-</style>
+</style> 

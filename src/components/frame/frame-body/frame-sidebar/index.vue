@@ -26,7 +26,7 @@
 							<i :class='["fa","fa-"+item.icon]'></i>
 							<span>{{item.name}}</span>
 							<em class="arrow"></em>
-						</a>
+						</a> 
 						<transition name="toggle-slide" mode="in-out">
 						<ul class="menu-list second-list"
 							v-if="item.child.length>0"
