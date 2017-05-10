@@ -5,7 +5,7 @@ import menus from './menu.js'
 // import Dashborad from '@/views/dashboard'
 // import Login from '@/views/auth/login'
 // import NotFound from '@/views/notfound'
-
+ 
 Vue.use(Router)
 let _routes = menus.map((item,i)=>{
   let r =item.split("/")[1];

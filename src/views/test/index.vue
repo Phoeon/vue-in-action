@@ -44,7 +44,7 @@
 </script>
 <style scoped lang="less">
 @import '../../less/macro.less';
-.content-zone{
+.content-zone{ 
 	h2{
 		.pd(0);
 		.mg(0);

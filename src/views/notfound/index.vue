@@ -36,7 +36,7 @@
 				});
 			}
 		}
-	}
+	} 
 </script>
 <style scoped lang="less">
 @import '../../less/macro.less';

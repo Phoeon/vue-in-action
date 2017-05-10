@@ -5,7 +5,7 @@
 	</h2>
 	
 	<table v-if="data.notice.notice_result.length" class="table-group">
-		<thead>
+		<thead> 
 			<tr>
 				<th>
 					<input type="checkbox">

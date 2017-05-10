@@ -35,7 +35,7 @@ export default {
 				this.$router.replace({
 					path : "/dashboard"
 				})
-			}
+			} 
 		},
 		register(){
 			sessionStorage.setItem("session_id",true);

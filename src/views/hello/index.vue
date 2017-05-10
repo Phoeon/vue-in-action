@@ -14,7 +14,7 @@
 		},
 		created(){
 			console.log(Math.random());
-			this.msg = "本地调试，请先去配置config/index.js ,  set variable accessToken  at line 6 "
+			this.msg = "本地调试，请先去配置config/index.js ,   set variable accessToken  at line 6 "
 		}
 	}
 </script>
