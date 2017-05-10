@@ -3,7 +3,7 @@ var path = require('path');
 
 var cookie = require('./cookie');
 
-var accessToken = "ju8u2md0e0p5lm27fdj59tg6h2";
+var accessToken = "3jmk2gm1pr9e6pkpmfp06tb7h7";
 
 function onProxyRes(proxyRes, req, res) {
     var proxyKey = 'set-cookie';

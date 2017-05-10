@@ -47,14 +47,11 @@
 	</div>
 </template>
 <script>
-	import LeftData from './left-data.js';
-	window.LeftData = LeftData;
-	LeftData.activeLevel1Menu = "客户管理";
-	LeftData.activeLevel2Menu = "";
 	export default {
 		name : "FrameSidebar",
+		props : ["menuData"],
 		data(){
-			return LeftData;
+			return this.menuData;
 		},
 		methods : {
 			toggleFirst(name){

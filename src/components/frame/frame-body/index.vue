@@ -1,7 +1,7 @@
 <template>
 <main class="frame-body">
 	<slot name="frame-sidebar">
-		<FrameSidebar></FrameSidebar>
+		<FrameSidebar :menuData="menuData"></FrameSidebar>
 	</slot>
 	<slot name="frame-main">
 		<FrameMain></FrameMain>
@@ -14,7 +14,8 @@ import FrameSidebar from './frame-sidebar/index';
 import FrameMain    from './frame-main/index';
 export default {
 	name : "FrameBody",
-	components : {FrameSidebar,FrameMain}
+	components : {FrameSidebar,FrameMain},
+	props : ["menuData"]
 }
 </script>
 

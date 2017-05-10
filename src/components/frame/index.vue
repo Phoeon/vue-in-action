@@ -1,10 +1,10 @@
 <template>
 	<div id="frame" class="frame">
 		<slot name="frame-header">
-			<FrameHeader></FrameHeader>
+			<FrameHeader :topNavs="topNavs"></FrameHeader>
 		</slot>
 		<slot name="frame-body">
-			<FrameBody></FrameBody>
+			<FrameBody :menuData="menuData"></FrameBody>
 		</slot>
 		<slot name="frame-footer">
 			<footer class="frame-footer"></footer>
@@ -14,9 +14,18 @@
 <script>
 import FrameHeader from './frame-header/index';
 import FrameBody from './frame-body/index';
+// import axios from 'axios';
+import {topNavs,menuData} from './frame-data';
+
 export default { 
 	name : "frame",
-	components : {FrameHeader,FrameBody}
+	components : {FrameHeader,FrameBody},
+	data(){
+		return {topNavs,menuData};
+	},
+	created(){
+		// axios.get('./frame.json')
+	}
 }
 </script>
 <style name="scoped" lang="less">
